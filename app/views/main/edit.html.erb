@@ -1,0 +1,10 @@
+<h1>Main#edit</h1>
+
+<%=form_for :address, :url=>{:action=>"edit", :id=>@address.id} do |f|%>
+    Name: <%=f.text_field(:name) %><br/>
+    Address: <%=f.text_field(:address) %><br/>
+    Email: <%=f.text_field(:email) %><br/>
+    Phone: <%=f.text_field(:phone) %><br/>
+    <%=submit_tag "Update"%>
+<%end%>
+

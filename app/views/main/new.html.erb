@@ -1,0 +1,10 @@
+<h1>Main#new</h1>
+
+<%=form_for :address, :url=>{:action=>"add"} do |f|%>
+    Name: <%=f.text_field(:name) %><br/>
+    Address: <%=f.text_field(:address) %><br/>
+    Email: <%=f.email_field(:email) %><br/>
+    Phone: <%=f.telephone_field(:phone) %><br/>
+    <%=submit_tag "Save"%>
+<%end%>
+

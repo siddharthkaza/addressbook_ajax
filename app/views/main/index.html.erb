@@ -1,0 +1,24 @@
+<h1>Address Listing</h1>
+<%=flash[:notice]%>
+
+<div id="addresslist">
+<ol>
+  <%= render :partial=>"main/address", :collection=>@addresses%>
+
+  <!-- This is moved to partial
+  <%for address in @addresses %>
+      <li>
+        <%=address.name%>
+        <%=address.address%>
+        <%=address.phone%>
+        <%=link_to("Edit", :controller=>"main", :action=>"edit", :id=>address)%>
+        <%=link_to("Delete",
+                   url_for(:controller=>"main", :action=>"delete", :id=>address),
+                   :confirm=>"Are you sure?")%>
+      </li>
+  <%end%>
+-->
+
+</ol>
+</div>
+<%=link_to("Add New", :action=>"new")%>

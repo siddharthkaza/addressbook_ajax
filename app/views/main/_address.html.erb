@@ -1,0 +1,8 @@
+<li>
+    <%=address.name%>
+    <%=address.address%>
+    <%=address.phone%>
+    <%=link_to("Edit", :controller=>"main", :action=>"edit", :id=>address)%>
+    <%=link_to("Delete", 
+    	url_for(:controller=>"main", :action=>"delete", :id=>address), :remote=>true, :confirm=>"Are you sure?")%>
+</li>
